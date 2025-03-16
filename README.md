@@ -24,16 +24,16 @@ int main() {
     scanf(" %[^\n]", cidade1);  // Corrigido para capturar string com espaços
 
     printf("Digite sua População: ");
-    scanf(" %d", &populacao1);
+    scanf("%d", &populacao1);
 
     printf("Quantos pontos turísticos: ");
     scanf("%d", &ptsturisticos1);
 
     printf("Digite sua Área (em km²): ");
-    scanf(" %f", &area1);
+    scanf("%f", &area1);
 
-    printf("Digite seu PIB (em milhoes): ");
-    scanf(" %f", &pib1);
+    printf("Digite seu PIB (em milhões): ");
+    scanf("%f", &pib1);
 
     printf("\nDigite os dados da segunda carta\n");
 
@@ -47,16 +47,16 @@ int main() {
     scanf(" %[^\n]", cidade2);  // Corrigido para capturar string com espaços
 
     printf("Digite sua População: ");
-    scanf(" %d", &populacao2);
+    scanf("%d", &populacao2);
 
     printf("Quantos pontos turísticos: ");
-    scanf(" %d", &ptsturisticos2);
+    scanf("%d", &ptsturisticos2);
 
     printf("Digite sua Área (em km²): ");
-    scanf(" %f", &area2);
+    scanf("%f", &area2);
 
-    printf("Digite seu PIB (em  milhoes): ");
-    scanf(" %f", &pib2);
+    printf("Digite seu PIB (em milhões): ");
+    scanf("%f", &pib2);
 
     printf("\n*** Dados da Primeira Carta ***\n");
     printf("Código: %s\n", codigo1);
@@ -65,12 +65,12 @@ int main() {
     printf("População: %d\n", populacao1);
     printf("Pontos Turísticos: %d\n", ptsturisticos1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f milhoes\n", pib1);
+    printf("PIB: %.2f milhões\n", pib1);
 
     float densidade1 = (float)populacao1 / area1;
     float percapita1 = pib1 / populacao1;
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-    printf("PIB Per Capita: %.2f milhoes por habitante\n", percapita1);
+    printf("PIB Per Capita: %.2f milhões por habitante\n", percapita1);
 
     printf("\n*** Dados da Segunda Carta ***\n");
     printf("Código: %s\n", codigo2);
@@ -79,12 +79,37 @@ int main() {
     printf("População: %d\n", populacao2);
     printf("Pontos Turísticos: %d\n", ptsturisticos2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f milhoes\n", pib2);
+    printf("PIB: %.2f milhões\n", pib2);
 
     float densidade2 = (float)populacao2 / area2;
     float percapita2 = pib2 / populacao2;
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
-    printf("PIB Per Capita: %.2f milhoes por habitante\n", percapita2);
+    printf("PIB Per Capita: %.2f milhões por habitante\n", percapita2);
+
+    // Comparação entre as cidades
+    if (populacao1 > populacao2) {
+        printf("\nA primeira cidade venceu na comparação de população!\n");
+    } else if (populacao1 < populacao2) {
+        printf("\nA segunda cidade venceu na comparação de população!\n");
+    } else {
+        printf("\nAs cidades têm a mesma população.\n");
+    }
+
+    if (pib1 > pib2) {
+        printf("A primeira cidade venceu na comparação de PIB!\n");
+    } else if (pib1 < pib2) {
+        printf("A segunda cidade venceu na comparação de PIB!\n");
+    } else {
+        printf("As cidades têm o mesmo PIB.\n");
+    }
+
+    if (area1 > area2) {
+        printf("A primeira cidade venceu na comparação de área!\n");
+    } else if (area1 < area2) {
+        printf("A segunda cidade venceu na comparação de área!\n");
+    } else {
+        printf("As cidades têm a mesma área.\n");
+    }
 
     return 0;
 }
